@@ -21,10 +21,6 @@ import { PlanetDataComponent } from './planet-data/planet-data.component';
   ],
   exports: [
     PlanetCardComponent,
-    PlanetMediaComponent,
-    PlanetInfoComponent,
-    PlanetSectionsComponent,
-    PlanetDataComponent
   ]
 })
 export class PlanetsModule { }
