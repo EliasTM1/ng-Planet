@@ -1,0 +1,17 @@
+nav {
+
+  span{
+    width: fit-content;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    // float: right;
+  }
+}
+
