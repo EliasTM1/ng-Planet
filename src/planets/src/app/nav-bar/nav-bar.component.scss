@@ -1,14 +1,17 @@
+@import '../../assets/styles/variables';
 nav {
   width: 100%;
-  border: 3px dotted greenyellow;
+  // border: 3px dotted greenyellow;
+  border-bottom: .1rem solid rgb(151, 151, 151, .2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 5.375rem;
 
-  span{
+  h2{
     width: fit-content;
     margin: 0;
+    min-width: fit-content;
   }
 
   ul {
@@ -16,26 +19,37 @@ nav {
     display: flex;
     max-width: 100%;
     text-align: right;
-    margin: 0;
+    // margin: 0;
+  }
+
+  li {
+    cursor: pointer;
+    margin-inline: 1rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $table-brkPoint) {
   nav {
     display: flex;
     flex-direction: column;
+    height: auto;
 
-    span {
+    h2 {
       margin: auto;
       margin-bottom: 0;
       text-align: center;
-      background-color: red;
+      // background-color: red;
     }
 
     ul {
       padding: 0;
       display: flex;
       justify-content: space-evenly;
+
+      li {
+        margin-inline: .5rem;
+        cursor: pointer;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanetsServiceService } from './services/planets-service.service';
+import { PlanetsService } from './services/planets-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { PlanetsServiceService } from './services/planets-service.service';
 })
 export class AppComponent implements OnInit {
   title = 'planets';
-  constructor (private planetsService : PlanetsServiceService) {
+  constructor (private planetsService : PlanetsService) {
 
   }
 

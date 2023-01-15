@@ -5,7 +5,7 @@ import { data } from '../../mocks/data';
 @Injectable({
   providedIn: 'root'
 })
-export class PlanetsServiceService {
+export class PlanetsService {
 
   constructor() { }
 

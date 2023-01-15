@@ -1,59 +1,58 @@
+@import '../../assets/styles/variables';
+
 section {
   display: grid;
-  width: 100%;
+  // width: 100%;
   height: 100vh;
   background-color: transparent;
   display: grid;
-  border: 5px double yellow;
+  border: 0;
   grid-template-areas:
-    "a b"
-    "a c";
-  grid-template-columns: 1.5fr 1fr;
-
+  "a b"
+  "a c";
+  grid-template-columns: 2fr 1fr;
+  padding-inline: 10.313rem;
 
 
   app-planet-media {
     height: 100%;
-  border: 3px solid skyblue;
-  grid-row: 1 / span 2;
-  background-color: transparent;
+    border: 0;
+    grid-row: 1 / span 2;
+    background-color: transparent;
   }
 
   app-planet-info {
     height: 100%;
-    border: 3px solid green;
     grid-row: 1;
     background-color: transparent;
   }
 
   app-planet-sections {
     height: 100%;
-  border: 3px solid red;
-  background-color: transparent;
-  grid-row: 2;
+    background-color: transparent;
+    grid-row: 2;
   }
 
   app-planet-data {
     height: 100%;
-    border: 3px solid orange;
     background-color: transparent;
     grid-column: 1 / 3;
   }
 
 }
 
-@media screen and (max-width: 768px) {
-// @media (max-width: 768px) {
+@media screen and (max-width: $table-brkPoint) {
   .test {
     grid-template-columns: 1fr 1fr;
+    padding-inline: 2rem;
 
     app-planet-media {
       grid-column: 1 / span 3;
       grid-row: 1;
-      background-color: yellowgreen !important;
     }
 
     app-planet-info {
+      // background-color: red !important;
       grid-column: 1;
       grid-row: 2;
     }
@@ -61,7 +60,16 @@ section {
     app-planet-sections {
       grid-column: 2;
       grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: auto;
+      width: 100%;
+      // background-color: red;
     }
+
 
     app-planet-data {
       grid-column: 1 / 3;
@@ -71,36 +79,27 @@ section {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: $mobile-brkPoint) {
   .test {
-    // grid-template-columns: 1fr 1fr;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     app-planet-media {
       order: 2;
-      // grid-column: 1 / 3;
-      // grid-row: 2;
     }
 
     app-planet-info {
       order: 3;
-      // grid-column: 1 / 3;
-      // grid-row: 3;
     }
 
     app-planet-sections {
       order: 1;
       height: 3rem;
-      // grid-column: 1 / 3;
-      // grid-row: 1;
     }
 
     app-planet-data {
       order: 4;
-      // grid-column: 1 / 3;
-      // grid-row: 4;
     }
   }
 }

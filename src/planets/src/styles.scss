@@ -1,64 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
-$primary-white: #FFFFFF;
-$primary-dark-blue: #070724;
-$primary-gray: #38384F;
-$primary-clear-gray: #838391;
-
-$planet-blue: #419EBB;
-$planet-yellow: #EDA249;
-$planet-purple: #6F2ED6;
-$planet-organge: #D14C32;
-$planet-red: #D83A34;
-$planet-dark-orange: #CD5120;
-$planet-green: #1EC2A4;
-$planet-ice: #2D68F0;
-
-$body-font: 'Spartan Regular', sans-serif;
-$body-font-size: 14px;
-$body-line-height: 20px;
-
-@mixin body-text {
-  font-family: $body-font;
-  font-size: $body-font-size;
-  line-height: $body-line-height;
-}
-
-h1{
-  font-family: 'Antonio Medium';
-  font-size: 80px;
-  line-height: 103px;
-}
-
-h2 {
-  font-family: 'Antonio Medium';
-  font-size: 40px;
-  line-height: 52px;
-  letter-spacing: -1.5;
-}
-
-h3{
-  font-family: 'Spartan Bold';
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2.6px;
-  line-height: 25px;
-}
-
-h4 {
-  font-family: 'Spartan Bold';
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1;
-}
-
-body {
-  margin: 0;
-  color: $primary-white;
-  background-color: $primary-dark-blue;
-  @include body-text;
-}
-
+@import "./assets/styles/variables";
 @font-face {
   font-family: "Antonio";
   src: url(./assets/fonts/Antonio/Antonio-VariableFont_wght.ttf);
@@ -77,4 +18,74 @@ body {
   font-family: "Spartan";
   src: url(./assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf);
 }
+
+@font-face {
+  font-family: "Spartan Regular";
+  src: url(./assets/fonts/League_Spartan/static/LeagueSpartan-Light.ttf);
+}
+@font-face {
+  font-family: "Spartan Bold";
+  src: url(./assets/fonts/League_Spartan/static/LeagueSpartan-Bold.ttf);
+}
+
+
+
+
+$body-font: 'Spartan Regular', sans-serif;
+$body-font-size: 14px;
+$body-line-height: 20px;
+
+@mixin body-text {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+h1{
+  font-family: 'Antonio Medium';
+  font-size: 80px;
+  line-height: 103px;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Antonio Medium';
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5;
+}
+
+h3{
+  font-family: 'Spartan Bold';
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2.6px;
+  line-height: 25px;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Spartan Bold';
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  margin-inline: 1rem;
+}
+
+body {
+  margin: 0;
+  color: $primary-white;
+  background-color: $primary-dark-blue;
+  font-family: "Spartan Regular";
+  line-height: 25px;
+  font-size: 1.1rem;
+}
+
+button{
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 

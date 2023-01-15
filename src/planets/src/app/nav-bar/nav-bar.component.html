@@ -2,30 +2,9 @@
   <h2>The Planets</h2>
 
     <ul>
-      <li>
-        planet 1
-      </li>
-      <li>
-        planet 2
-      </li>
-      <li>
-        planet 1
-      </li>
-      <li>
-        planet 2
-      </li>
-      <li>
-        planet 1
-      </li>
-      <li>
-        planet 2
-      </li>
-      <li>
-        planet 1
-      </li>
-      <li>
-        planet 2
-      </li>
+      <h4 *ngFor="let planet of availablePlanets">
+        {{planet}}
+      </h4>
     </ul>
 
 </nav>
