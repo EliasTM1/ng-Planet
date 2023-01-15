@@ -54,6 +54,8 @@ h4 {
 
 body {
   margin: 0;
+  color: $primary-white;
+  background-color: $primary-dark-blue;
   @include body-text;
 }
 

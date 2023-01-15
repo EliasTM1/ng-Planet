@@ -2,38 +2,41 @@ section {
   display: grid;
   width: 100%;
   height: 100vh;
-  background-color: red;
+  background-color: transparent;
   display: grid;
+  border: 5px double yellow;
   grid-template-areas:
     "a b"
     "a c";
   grid-template-columns: 1.5fr 1fr;
 
+
+
   app-planet-media {
     height: 100%;
   border: 3px solid skyblue;
   grid-row: 1 / span 2;
-  background-color: yellowgreen;
+  background-color: transparent;
   }
 
   app-planet-info {
     height: 100%;
     border: 3px solid green;
     grid-row: 1;
-    background-color: green;
+    background-color: transparent;
   }
 
   app-planet-sections {
     height: 100%;
-  border: 3px solid purple;
-  background-color: purple;
+  border: 3px solid red;
+  background-color: transparent;
   grid-row: 2;
   }
 
   app-planet-data {
     height: 100%;
     border: 3px solid orange;
-    background-color: orange;
+    background-color: transparent;
     grid-column: 1 / 3;
   }
 

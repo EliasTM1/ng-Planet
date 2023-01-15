@@ -14,7 +14,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     PagesModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
