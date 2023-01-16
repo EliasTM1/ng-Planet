@@ -3,7 +3,7 @@
 section {
   display: grid;
   // width: 100%;
-  height: 100vh;
+  height: 85vh;
   background-color: transparent;
   display: grid;
   border: 0;
@@ -41,10 +41,16 @@ section {
 
 }
 
-@media screen and (max-width: $table-brkPoint) {
+@media screen and (max-width: $tablet-adjust-brkPoint) {
+  .test {
+    padding-inline: 5rem;
+  }
+}
+
+@media screen and (max-width: $tablet-brkPoint) {
   .test {
     grid-template-columns: 1fr 1fr;
-    padding-inline: 2rem;
+    padding-inline: 0rem;
 
     app-planet-media {
       grid-column: 1 / span 3;
@@ -86,6 +92,7 @@ section {
     justify-content: center;
 
     app-planet-media {
+      // margin-top: 4rem;
       order: 2;
     }
 
@@ -95,7 +102,8 @@ section {
 
     app-planet-sections {
       order: 1;
-      height: 3rem;
+      height: 250px;
+      // height: 3rem;
     }
 
     app-planet-data {

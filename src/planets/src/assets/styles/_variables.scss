@@ -14,5 +14,8 @@ $planet-ice: #2D68F0;
 
 // Breakpoints
 
-$table-brkPoint: 850px;
+$tablet-adjust-brkPoint: 1300px;
+$tablet-brkPoint: 768px;
 $mobile-brkPoint: 500px;
+
+$grayborder :0.1rem solid rgb(151, 151, 151, .2);

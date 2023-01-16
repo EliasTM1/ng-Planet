@@ -1,3 +1,5 @@
+@import "../../../assets/styles/variables";
+
 .planet-info {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,29 @@
   height: 90%;
   margin: 0;
 
-  // p{
-  //   width: ;
-  // }
+  h1 {
+    font-size: 4.313rem;
+  }
+}
+
+@media screen and (max-width: $tablet-brkPoint) {
+  .planet-info {
+    padding-left: 2.5rem;
+
+    h1 {
+      font-size: 2.563rem;;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-brkPoint) {
+  .planet-info {
+    padding-inline: 2rem;
+    align-items: center;
+    justify-content: inherit;
+
+    h1 {
+      font-size: 2.563rem;
+    }
+  }
 }

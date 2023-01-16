@@ -1,0 +1,80 @@
+@import '../../../assets/styles/variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2rem;
+  .planet-data {
+    height: 128px;
+    width: 23%;
+    border: $grayborder;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: .5rem;
+    overflow: scroll;
+
+    span {
+      height: auto;
+      font-family: "Antonio";
+      font-size: .7rem;
+      opacity: .5;
+      line-height: .5rem;
+      letter-spacing: .1rem;
+      margin: .3rem;
+      margin-top: 1.3rem;
+      margin-left: 1rem;
+    }
+
+    h2 {
+      margin: .5rem;
+      font-size: 2rem;
+      height: 1.313rem;
+      margin-bottom: 3rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-brkPoint) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .planet-data {
+      height: 100%;
+      width: 23%;
+
+      span {
+
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+}
+}
+
+@media screen and (max-width: $mobile-brkPoint) {
+  .container {
+    flex-direction: column;
+    .planet-data {
+      height: 3rem;
+      width: 100%;
+      border: $grayborder;
+      background-color: transparent;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+      margin-bottom: 1rem;
+      span {
+        margin-inline: 1rem;
+      }
+
+    }
+
+
+}
+}

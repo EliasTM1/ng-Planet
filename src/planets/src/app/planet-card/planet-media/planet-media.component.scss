@@ -5,12 +5,23 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin: auto;
 
   img {
-    width: 30%;
+    width: 50%;
   }
 }
 
+
+@media screen and (max-width: $tablet-brkPoint) {
+  .media-container{
+    // width: 50%;
+
+    img {
+      width: 50%;
+    }
+  }
+  }
 
 @media screen and (max-width: $mobile-brkPoint) {
   .media-container{
@@ -20,7 +31,7 @@
     justify-content: center;
 
     img {
-      width: 150px;
+      width: 30%;
     }
   }
   }

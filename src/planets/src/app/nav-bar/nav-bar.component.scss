@@ -2,7 +2,7 @@
 nav {
   width: 100%;
   // border: 3px dotted greenyellow;
-  border-bottom: .1rem solid rgb(151, 151, 151, .2);
+  border-bottom: $grayborder;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,16 +19,14 @@ nav {
     display: flex;
     max-width: 100%;
     text-align: right;
-    // margin: 0;
   }
 
-  li {
+  h4 {
     cursor: pointer;
-    margin-inline: 1rem;
   }
 }
 
-@media screen and (max-width: $table-brkPoint) {
+@media screen and (max-width: $tablet-brkPoint) {
   nav {
     display: flex;
     flex-direction: column;
