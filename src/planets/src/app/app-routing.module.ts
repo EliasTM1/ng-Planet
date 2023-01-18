@@ -6,22 +6,18 @@ import { MainComponent } from './pages/main/main.component';
 // Import the components that you want to use as routes
 
 const routes: Routes = [
-  { path: '',
-    component:MainComponent
-  },
   {
     path: 'planet/:id',
-    component: PlanetCardComponent
+    component: MainComponent,
   },
   {
     path: '**',
-    redirectTo: 'dev'
-  }
-
+    redirectTo: 'planet/earth',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

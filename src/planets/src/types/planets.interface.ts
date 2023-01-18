@@ -1,22 +1,47 @@
 export interface Planet {
-    geology:     Geology;
+    geology:     PlanetInfo;
     images:      Images;
     name:        string;
-    overview:    Geology;
+    overview:    PlanetInfo;
     radius:      string;
     revolution:  string;
     rotation:    string;
-    structure:   Geology;
+    structure:   PlanetInfo;
     temperature: string;
 }
 
-export interface Geology {
+export interface DataInNumber {
+  name: string;
+  radius : string;
+  revolution: string;
+  rotation: string;
+  temperature: string
+}
+
+export interface DataDescription {
+  name : string;
+  overview: PlanetInfo;
+  geology: PlanetInfo;
+  structure: PlanetInfo
+}
+
+
+export interface PlanetInfo {
     source:  string;
     content: string;
 }
 
 export interface Images {
+    name?: string;
     geology:  string;
     internal: string;
     planet:   string;
+}
+
+
+export enum AvailableViews {
+  Overview = 'overview',
+  Geology = 'geology',
+  Structure = 'structure',
+
 }
