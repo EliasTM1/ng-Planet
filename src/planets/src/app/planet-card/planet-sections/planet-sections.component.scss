@@ -23,11 +23,11 @@ ul {
 
     p{
       font-weight: bold;
-      font-size: .5rem;
+      font-size: .6rem;
       letter-spacing: 0.1rem;
 
       span {
-        margin-inline: .5rem;
+        margin-inline: 1rem;
       }
     }
   }
@@ -41,7 +41,10 @@ ul {
     justify-content: center;
     margin-right: 2.6rem;
     width: 80%;
-    // background-color: red;
+
+    p{
+      font-size: .5rem;
+    }
   }
 }
 

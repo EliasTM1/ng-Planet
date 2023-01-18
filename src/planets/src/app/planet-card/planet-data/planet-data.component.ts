@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DataInNumber } from 'src/types/planets.interface';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-planet-data',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planet-data.component.scss']
 })
 export class PlanetDataComponent implements OnInit {
+  @Input() data : DataInNumber[] = []
 
   constructor() { }
 
+
   ngOnInit(): void {
+    console.log(this.data, "ATOS")
   }
 
 }

@@ -1,28 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ParticlesConfig } from './particles/particlesjs-config';
+import { DataInNumber, DataDescription , Images} from 'src/types/planets.interface';
 // import * as particlesJS from 'particles.js';
 declare let particlesJS: any
 @Component({
   selector: 'app-planet-card',
   template: `
     <section class="test">
-      <!-- <div id="particles-js"></div> -->
-      <app-planet-media></app-planet-media>
-      <app-planet-info></app-planet-info>
+      <app-planet-media [data]="planetImg"></app-planet-media>
+      <app-planet-info [data]="planetDescription"></app-planet-info>
       <app-planet-sections></app-planet-sections>
-      <app-planet-data></app-planet-data>
+      <app-planet-data [data]="planetData"></app-planet-data>
     </section>
   `,
   styleUrls: ['./planet-card.component.scss'],
 })
 export class PlanetCardComponent {
+  @Input() planetData : DataInNumber[] = []
+  @Input() planetDescription : DataDescription[] = []
+  @Input() planetImg : Images[] = []
   constructor() {}
 
-  // ngOnInit(): void {
-  // this.invokeParticles()
-  // }
-
-  // invokeParticles(): void {
-  //   particlesJS('particles-js', ParticlesConfig, function() {});
-  // }
 }

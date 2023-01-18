@@ -1,9 +1,11 @@
-<div class="planet-info">
-  <h1>Venus</h1>
+<div class="planet-info" *ngFor="let info of data">
+  <h1>{{info.name}}</h1>
 
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eligendi quam aliquid vitae, totam velit ratione voluptates mollitia sint commodi suscipit itaque odio impedit accusamus, quae eum quidem neque doloribus temporibus provident!
+    {{info.overview.content}}
   </p>
-
-  <span>wikipedia.com</span>
+  <!-- TODO: Finish wikipedia link -->
+  <!-- <a [routerLink]="{{info.overview.source}}">wikipedia.com</a> -->
 </div>
+
+

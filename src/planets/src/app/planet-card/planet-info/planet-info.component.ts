@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataDescription } from 'src/types/planets.interface';
 
 @Component({
   selector: 'app-planet-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planet-info.component.scss']
 })
 export class PlanetInfoComponent implements OnInit {
+
+  @Input() data : DataDescription[] = []
 
   constructor() { }
 

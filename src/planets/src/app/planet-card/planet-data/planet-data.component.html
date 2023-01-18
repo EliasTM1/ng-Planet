@@ -1,21 +1,22 @@
-<div class="container">
-  <div class="planet-data">
+<div class="container" *ngFor="let planetFact of data">
+  <div class="planet-data" >
     <span>ROTATION TIME</span>
-    <h2>243 DAYS</h2>
+    <h2>{{planetFact.rotation}}</h2>
   </div>
   <div class="planet-data">
     <span>REVOLUTION TIME</span>
-    <h2>224.7 DAYS</h2>
+    <h2>{{planetFact.revolution}}</h2>
 
   </div>
   <div class="planet-data">
     <span>RADIOUS</span>
-    <h2>6,051.8 KM</h2>
+    <h2>{{planetFact.radius}}</h2>
 
   </div>
   <div class="planet-data">
     <span>AVERAGE TEMP</span>
-    <h2>471°C</h2>
+    <h2>{{planetFact.temperature}}</h2>
 
   </div>
 </div>
+

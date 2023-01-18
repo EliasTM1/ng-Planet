@@ -1,9 +1,3 @@
-<div class="media-container">
-  <!-- Saturn -->
-  <!-- <img src="../../../assets/planet-saturn-internal.svg" alt=""> -->
-  <img src="../../../assets/planet-jupiter.svg" alt="">
-  <!-- <img src="../../../assets/planet-mars-internal.svg" alt=""> -->
-  <!-- <img src="../../../assets/planet-venus.svg" alt=""> -->
-  <!-- <img src="../../../assets/planet-mercury.svg" alt=""> -->
-  <!-- <img src="../../../assets/planet-earth.svg" alt=""> -->
+<div class="media-container" *ngFor="let image of data">
+  <img src="{{image.planet}}" alt="">
 </div>

@@ -20,7 +20,6 @@ export class NavBarComponent implements OnInit {
     this.planetsService.getMockData().forEach((planet: Planet) => {
       this.availablePlanets.push(planet.name.toUpperCase())
     })
-
   }
 
 }

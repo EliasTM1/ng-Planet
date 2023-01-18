@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Images } from 'src/types/planets.interface';
 
 @Component({
   selector: 'app-planet-media',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planet-media.component.scss']
 })
 export class PlanetMediaComponent implements OnInit {
+
+  @Input() data : Images[] = []
 
   constructor() { }
 

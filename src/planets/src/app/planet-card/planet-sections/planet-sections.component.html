@@ -1,11 +1,7 @@
 <ul>
-  <button class="sections-btn">
-    <p><span> 01 </span>OVERVIEW</p>
-  </button>
-  <button class="sections-btn">
-    <p><span> 02 </span>INTERNAL STRUCTURE</p>
-  </button>
-  <button class="sections-btn">
-    <p><span> 03 </span>SURFACE GEOLOGY</p>
-  </button>
+  <ng-container *ngFor="let view of availViews; index as i">
+    <button class="sections-btn" (click)="setCurrentView(view)">
+      <p><span> 0{{i + 1}} </span>{{view | uppercase}}</p>
+    </button>
+  </ng-container>
 </ul>

@@ -8,12 +8,11 @@ import { PlanetsService } from './services/planets-service.service';
 })
 export class AppComponent implements OnInit {
   title = 'planets';
-  constructor (private planetsService : PlanetsService) {
+  constructor () {
 
   }
 
   ngOnInit () {
-    let somethign = this.planetsService.getMockData()
-    console.log(somethign)
+
   }
 }

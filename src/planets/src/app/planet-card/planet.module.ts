@@ -17,7 +17,7 @@ import { PlanetDataComponent } from './planet-data/planet-data.component';
     PlanetDataComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     PlanetCardComponent,

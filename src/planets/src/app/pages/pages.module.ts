@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlanetsModule } from '../planet-card/planet.module';
@@ -11,7 +12,8 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
   ],
   imports: [
     CommonModule,
-    PlanetsModule
+    PlanetsModule,
+    RouterModule
   ]
 })
 export class PagesModule { }
