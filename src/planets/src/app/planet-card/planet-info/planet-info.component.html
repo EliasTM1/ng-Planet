@@ -1,11 +1,8 @@
-<div class="planet-info" *ngFor="let info of data">
-  <h1>{{info.name}}</h1>
+<div class="planet-info">
+  <h1>{{currentPlanet | uppercase}}</h1>
 
   <p>
-    {{info.overview.content}}
+    {{paragraph}}
   </p>
   <!-- TODO: Finish wikipedia link -->
-  <!-- <a [routerLink]="{{info.overview.source}}">wikipedia.com</a> -->
 </div>
-
-

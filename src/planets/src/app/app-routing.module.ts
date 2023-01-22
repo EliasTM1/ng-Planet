@@ -7,12 +7,12 @@ import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   {
-    path: 'planet/:id',
+    path: 'planet/:name',
     component: MainComponent,
   },
   {
     path: '**',
-    redirectTo: 'planet/earth',
+    redirectTo: 'planet/mercury',
   },
 ];
 

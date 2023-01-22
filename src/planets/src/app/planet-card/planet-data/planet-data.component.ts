@@ -6,14 +6,9 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
   templateUrl: './planet-data.component.html',
   styleUrls: ['./planet-data.component.scss']
 })
-export class PlanetDataComponent implements OnInit {
+export class PlanetDataComponent  {
   @Input() data : DataInNumber[] = []
 
   constructor() { }
-
-
-  ngOnInit(): void {
-    console.log(this.data, "ATOS")
-  }
 
 }
