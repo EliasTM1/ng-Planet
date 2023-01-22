@@ -1,12 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ParticlesConfig } from './particles/particlesjs-config';
+import { Component, Input } from '@angular/core';
 import {
   DataInNumber,
   DataDescription,
   Images,
 } from 'src/types/planets.interface';
-// import * as particlesJS from 'particles.js';
-// declare let particlesJS: any;
 @Component({
   selector: 'app-planet-card',
   template: `

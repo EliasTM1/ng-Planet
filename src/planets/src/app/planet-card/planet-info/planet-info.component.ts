@@ -16,11 +16,8 @@ import { PlanetsService } from 'src/app/services/planets-service.service';
 })
 export class PlanetInfoComponent implements OnInit, OnChanges {
   @Input() data: DataDescription[] = [];
-  currentData: PlanetInfo[] = [];
   activeSelection: string = '';
   currentPlanet: string = '';
-
-  // * UI
   paragraph: string = '';
   url: string = '';
 
@@ -38,8 +35,6 @@ export class PlanetInfoComponent implements OnInit, OnChanges {
     this.currentPlanet = currentInfo.name;
   }
 
-
-
   ngOnInit(): void {
     const planetData: any = this.data[0];
     this.currentPlanet = planetData.name;
@@ -50,16 +45,7 @@ export class PlanetInfoComponent implements OnInit, OnChanges {
       const planetData: any = this.data[0];
       this.activeSelection = view;
       this.paragraph = planetData[view].content
-      this.update()
     });
   }
 
-  update() {
-    const planet = this.data[0]
-  }
-
-  filterDate(planetData: DataDescription) {
-    const usrSelection =
-      planetData?.[this.activeSelection as keyof DataDescription];
-  }
 }

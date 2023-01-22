@@ -1,5 +1,4 @@
-import { data } from './../../../mocks/data';
-import { Component, OnChanges, OnInit, SimpleChanges, ɵɵtrustConstantHtml } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ParticlesConfig } from '../../planet-card/particles/particlesjs-config';
 import { PlanetsService } from 'src/app/services/planets-service.service';
 import {
@@ -8,8 +7,7 @@ import {
   Images,
   Planet,
 } from 'src/types/planets.interface';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-// import * as particlesJS from 'particles.js';
+import { ActivatedRoute,  Router } from '@angular/router';
 declare let particlesJS: any;
 
 @Component({
@@ -32,9 +30,8 @@ export class MainComponent implements OnInit {
   fltdPlanetData: DataInNumber[] = [];
   fltdPlanetInfo: DataDescription[] = [];
   fltdPlanetImg: Images[] = [];
+
   colors : any
-  // * Pass data to child components
-  image: string = '';
   currentPlanet: string = '';
   currentView: string = '';
   currentColor: string = '';
@@ -49,7 +46,6 @@ export class MainComponent implements OnInit {
     this.route.params.subscribe((params) => {
       let { name } = params;
       if (!this.planetService.localSolarSystem.includes(name)) {
-        console.log("pppp")
         name = this.planetService.solarSystem[0];
         this.planetService.changePlanet(name)
         this.router.navigate(['earth', name]);
@@ -59,17 +55,7 @@ export class MainComponent implements OnInit {
       this.updatePlanet();
     });
 
-    this.planetService.currentView.subscribe((view) => {
-      if (view === '') {
-        this.planetService.changeView('overview');
-      }
-      this.currentView = view;
-    });
-
     this.planetService.currentPlanet.subscribe((planet) => {
-      if (planet === '' || this.planetService.solarSystem.includes(planet)) {
-        // this.planetService.changePlanet('earth');
-      }
       this.currentPlanet = planet;
     });
   }

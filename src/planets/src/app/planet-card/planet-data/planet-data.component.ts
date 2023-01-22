@@ -1,5 +1,5 @@
 import { DataInNumber } from 'src/types/planets.interface';
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-planet-data',
