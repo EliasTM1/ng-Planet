@@ -14,12 +14,24 @@ export class NavBarComponent implements OnInit {
     private planetsService : PlanetsService
   ) { }
 
-  availablePlanets : string[] = []
+  availablePlanets : string[] = [];
+  currentColor: string = '';
 
   ngOnInit(): void {
     this.planetsService.getMockData().forEach((planet: Planet) => {
       this.availablePlanets.push(planet.name.toUpperCase())
     })
+    this.planetsService.currentColor.subscribe(e => {
+      this.currentColor = e
+    })
   }
+
+  setStyles() {
+    return {
+      'border-top' : `3px ${this.currentColor} solid`
+      // 'border-top' : `3px red solid`
+    }
+  }
+
 
 }

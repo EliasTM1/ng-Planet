@@ -1,14 +1,13 @@
 <ul>
-  <ng-container *ngFor="let view of planets; index as i">
+  <ng-container *ngFor="let view of views; index as i">
     <button
       #button
       class="sections-btn"
       (click)="setCurrentView(view.planet)"
-      [ngClass]="view.active ? 'active' : ''"
-      [ngStyle]="{'background-color': view.active ? currentColor : ''}"
+      [ngStyle]="setStyles(view.active)"
       >
       <p>
-        <span> 0{{ i + 1 }} </span>{{ view.planet | uppercase }}
+        <span> 0{{ i + 1 }} </span>{{ view.screenName | uppercase }}
       </p>
     </button>
   </ng-container>

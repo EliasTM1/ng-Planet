@@ -12,13 +12,14 @@ ul {
     height: 3rem;
     border: $grayborder;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
     text-align: left;
     span {
       color: rgb(255, 255, 255, 0.3);
     }
     &:hover {
       background-color: rgb(216, 216, 216, 0.2);
+      // opacity: .5;
     }
 
     p{
@@ -33,6 +34,7 @@ ul {
   }
   .active {
     background-color: $planet-blue;
+    // border: none !important;
   }
 }
 
@@ -53,15 +55,24 @@ ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     max-height: 20px !important;
     width: 100%;
+    border-bottom: $grayborder;
 
     .sections-btn {
       padding: 0 !important;
       text-overflow: ellipsis;
       border: none;
-      border-bottom: $grayborder;
+      background-color: transparent !important;
+      width: 20%;
+
+      p {
+        text-align: center;
+        span{
+          display: none;
+        }
+      }
     }
   }
-
 }

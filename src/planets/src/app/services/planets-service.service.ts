@@ -78,6 +78,7 @@ export class PlanetsService {
   planetColors(planet: string): string {
     this.colorMap.forEach((config: any) => {
       if (config.name === planet) {
+        console.error(config.color)
         this.changeColor(config.color);
         return config.color;
       }
