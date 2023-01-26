@@ -1,10 +1,22 @@
- <nav>
+<nav>
   <h2>The Planets</h2>
-    <ul>
-      <li *ngFor="let planet of availablePlanets" >
-        <h4 [routerLink]="['/planet', planet.toLowerCase()]" [ngStyle]="setStyles()" >
-          {{planet}}
-        </h4>
-      </li>
-    </ul>
+  <ul [ngClass]="[isMenuOpen ? '' : 'collapse-menu']">
+    <li
+    *ngFor="let planet of availablePlanets; index as i"
+    [ngStyle]="{'border-bottom': i !== colorMap.length - 1 && isMenuOpen  && isMobile?  '1px solid rgb(255, 255, 255, 0.3)' : ''}"
+    [ngClass]="{'fadeout' : !isMenuOpen}"
+    >
+      <h4
+      [routerLink]="['/planet', planet.toLowerCase()]"
+      >
+        <span id="menu-color" [ngStyle]="setStyles(i)">..</span>{{ planet }}
+        <span class="mobile-only section-pointer">></span>
+      </h4>
+    </li>
+  </ul>
+  <div id="mobile-menu" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>

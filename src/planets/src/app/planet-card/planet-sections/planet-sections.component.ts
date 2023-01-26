@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 import { PlanetsService } from 'src/app/services/planets-service.service';
 import { AvailableViews } from 'src/types/planets.interface';
 
@@ -12,13 +12,12 @@ export class PlanetSectionsComponent implements OnInit {
 
   constructor(
     private planetService: PlanetsService,
-    private route: ActivatedRoute
     ) {
     this.setMobile();
-    window.addEventListener('resize', () => this.setMobile())
   }
 
   @ViewChildren('button') butonsChildren!: QueryList<ElementRef>;
+
   @Input() currentColor! : string;
   @Output() userSelection = new EventEmitter<string>()
   availViews = Object.values(AvailableViews);
@@ -26,6 +25,7 @@ export class PlanetSectionsComponent implements OnInit {
   currentPlanet : string = ''
   isActive: boolean = false
   isMobile : boolean = false
+  screenWidth: number = 0;
 
   views : any = [
     { planet: AvailableViews.Overview , active: false, screenName: 'overvirew' },
@@ -33,13 +33,16 @@ export class PlanetSectionsComponent implements OnInit {
     { planet: AvailableViews.Structure , active: false, screenName: 'surface geology' }
   ]
 
+  onResize() {
+    this.screenWidth = window.innerWidth;
+  }
+
   setMobile() {
-    this.isMobile = window.innerWidth <= 500;
+    this.isMobile = window.innerWidth <= 500
   }
 
   ngOnInit(): void {
     this.setInitialView()
-
   }
 
   setInitialView() {
@@ -52,7 +55,6 @@ export class PlanetSectionsComponent implements OnInit {
     })
 
     this.planetService.currentPlanet.subscribe(planet => {
-      console.log(planet)
       if (planet === '') {
         this.planetService.changeView('overview')
         this.currentSelection = planet;
@@ -91,8 +93,9 @@ export class PlanetSectionsComponent implements OnInit {
 
   setStyles(active: boolean) {
     return {
+      // 'color' :  this.isMobile && active ? `white` : 'rgb(255, 255, 255, 0.3)',
       'background-color' : !this.isMobile && active ? this.currentColor : '',
-      'border-bottom': this.isMobile && active ? `3px ${this.currentColor} solid` : ''
+      'border-bottom': this.isMobile && active ? `3px ${this.currentColor} solid` : '',
     }
   }
 }

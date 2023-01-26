@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { data } from '../../mocks/data';
 import { Planet } from 'src/types/planets.interface';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -41,13 +41,13 @@ export class PlanetsService {
     };
   });
 
-  private view = new Subject<string>();
+  private view = new BehaviorSubject<string>('overview');
   currentView = this.view.asObservable();
 
-  private planet = new Subject<string>();
+  private planet = new BehaviorSubject<string>(this.localSolarSystem[0]);
   currentPlanet = this.planet.asObservable();
 
-  private color = new Subject<string>();
+  private color = new BehaviorSubject<string>(this.colors[0]);
   currentColor = this.color.asObservable();
 
   changeView(view: string) {
@@ -78,7 +78,6 @@ export class PlanetsService {
   planetColors(planet: string): string {
     this.colorMap.forEach((config: any) => {
       if (config.name === planet) {
-        console.error(config.color)
         this.changeColor(config.color);
         return config.color;
       }
